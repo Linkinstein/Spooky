@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class MovementControls : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] private float moveSpeed;
+    public bool CanMove { get; private set; } = true;
+
+    [Header("Movement Parameters")]
+    [SerializeField] private float walkSpeed = 3.0f;
+    [SerializeField] private float gravity = 30.0f;
 
     [Header("Look Parameters")]
     [SerializeField, Range(1, 10)] private float lookSpeedX = 2.0f;
@@ -16,42 +19,44 @@ public class MovementControls : MonoBehaviour
     private float rotationX = 0;
 
     private Camera cam;
-
-    private float horizontalInput;
-    private float verticalInput;
+    private CharacterController cc;
 
     private Vector3 moveDirection;
-
-    private Rigidbody rb;
+    private Vector2 currentInput;
 
     private void Start()
     {
         cam = GetComponentInChildren<Camera>();
-        rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
+        cc = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
     {
-        MoveInput();
-        MouseInput();
+        if (CanMove)
+        {
+            MoveInput();
+            MouseInput();
+
+            MovePlayer();
+        }
     }
 
-    private void FixedUpdate()
-    {
-        MovePlayer();
-    }
 
     private void MoveInput()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        currentInput = new Vector2(walkSpeed * Input.GetAxis("Vertical"), walkSpeed * Input.GetAxis("Horizontal"));
+
+        float moveDirectionY = moveDirection.y;
+        moveDirection = (transform.TransformDirection(Vector3.forward) * currentInput.x) + (transform.TransformDirection(Vector3.right) * currentInput.y);
+        moveDirection.y = moveDirectionY;
     }
 
     private void MovePlayer()
     {
-        moveDirection = transform.forward * verticalInput + transform.right * horizontalInput;
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        if( cc.isGrounded ) moveDirection.y -= gravity * Time.deltaTime;
+        cc.Move(moveDirection * Time.deltaTime);
     }
 
     private void MouseInput()
