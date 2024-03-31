@@ -256,3 +256,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHand: {fileID: 5666666356750809093}
   rightHand: {fileID: 4739461742723625556}
+  lightOrb: {fileID: 389881913747542418, guid: de931625981516542aee78e60b393bae, type: 3}
