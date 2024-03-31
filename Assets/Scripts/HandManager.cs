@@ -9,6 +9,8 @@ public class HandManager : MonoBehaviour
     private Hands lHand;
     private Hands rHand;
 
+    [SerializeField] private GameObject lightOrb;
+
 
     void Start()
     {
@@ -53,7 +55,9 @@ public class HandManager : MonoBehaviour
         }
         else if (handSigns == new Vector2(3, 1))
         {
-            Debug.Log("3 1");
+            Vector3 spawnPosition = transform.position + transform.forward * 2f;
+            GameObject instanceObj = Instantiate(lightOrb, spawnPosition, Quaternion.identity);
+            instanceObj.transform.rotation = transform.rotation;
         }
         else if (handSigns == new Vector2(3, 2))
         {
