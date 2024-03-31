@@ -8,7 +8,7 @@ public class MovementControls : MonoBehaviour
 
     [Header("Movement Parameters")]
     [SerializeField] private float walkSpeed = 3.0f;
-    [SerializeField] private float gravity = 30.0f;
+    [SerializeField] private float gravity = 10.0f;
 
     [Header("Look Parameters")]
     [SerializeField, Range(1, 10)] private float lookSpeedX = 2.0f;
