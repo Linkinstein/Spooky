@@ -4,25 +4,34 @@ using UnityEngine;
 
 public class HandManager : MonoBehaviour
 {
-    [SerializeField] GameObject leftHand;
-    [SerializeField] GameObject rightHand;
+    private GameManager gm;
+    [SerializeField] private GameObject leftHand;
+    [SerializeField] private GameObject rightHand;
     private Hands lHand;
     private Hands rHand;
 
     [SerializeField] private GameObject lightOrb;
 
+    private bool paused
+    {
+        get { return gm != null && gm.paused; }
+    }
 
     void Start()
     {
+        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         lHand = leftHand.GetComponent<Hands>();
         rHand = rightHand.GetComponent<Hands>();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (!paused)
         {
-            executeSpell();
+            if (Input.GetKey(KeyCode.Space))
+            {
+                executeSpell();
+            }
         }
     }
 

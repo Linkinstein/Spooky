@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementControls : MonoBehaviour
 {
-    public bool CanMove { get; private set; } = true;
+    private GameManager gm;
 
     [Header("Movement Parameters")]
     [SerializeField] private float walkSpeed = 3.0f;
@@ -23,9 +23,14 @@ public class MovementControls : MonoBehaviour
 
     private Vector3 moveDirection;
     private Vector2 currentInput;
+    private bool paused
+    {
+        get { return gm != null && gm.paused; }
+    }
 
     private void Start()
     {
+        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         cam = GetComponentInChildren<Camera>();
         cc = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -34,7 +39,7 @@ public class MovementControls : MonoBehaviour
 
     private void Update()
     {
-        if (CanMove)
+        if (!paused)
         {
             MoveInput();
             MouseInput();
