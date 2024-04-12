@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3787757145038360066}
   - component: {fileID: 8918500307825862457}
   - component: {fileID: 3100338788077536079}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: handR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 2971549378396802681}
   - component: {fileID: 381974971548554570}
   - component: {fileID: 4414131160011741488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: handL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3373577673138611216}
   - component: {fileID: 7534419182837339539}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,3 +257,4 @@ MonoBehaviour:
   leftHand: {fileID: 5666666356750809093}
   rightHand: {fileID: 4739461742723625556}
   lightOrb: {fileID: 389881913747542418, guid: de931625981516542aee78e60b393bae, type: 3}
+  lightSigil: {fileID: 840023261889683488, guid: c706756c10ebfab4ea60cc99dbc53ad8, type: 3}

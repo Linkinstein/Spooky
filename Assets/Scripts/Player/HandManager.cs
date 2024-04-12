@@ -11,6 +11,7 @@ public class HandManager : MonoBehaviour
     private Hands rHand;
 
     [SerializeField] private GameObject lightOrb;
+    [SerializeField] private GameObject lightSigil;
 
     private bool paused
     {
@@ -64,13 +65,15 @@ public class HandManager : MonoBehaviour
         }
         else if (handSigns == new Vector2(3, 1))
         {
-            Vector3 spawnPosition = transform.position + transform.forward * 2f;
-            GameObject instanceObj = Instantiate(lightOrb, spawnPosition, Quaternion.identity);
+            //Vector3 spawnPosition = transform.position + transform.forward;
+            GameObject instanceObj = Instantiate(lightOrb, transform.position, Quaternion.identity);
             instanceObj.transform.rotation = transform.rotation;
         }
         else if (handSigns == new Vector2(3, 2))
         {
-            Debug.Log("3 2");
+            Vector3 spawnPosition = transform.position + new Vector3(0, -2, 0);
+            GameObject instanceObj = Instantiate(lightSigil, spawnPosition, Quaternion.identity);
+            instanceObj.transform.Rotate(new Vector3(90, 0, 0), Space.World);
         }
         else if (handSigns == new Vector2(3, 3))
         {

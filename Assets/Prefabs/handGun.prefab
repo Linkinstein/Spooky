@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1907902749565800221}
   - component: {fileID: 9028710215997533764}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: handGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -60,7 +60,8 @@ public class MovementControls : MonoBehaviour
 
     private void MovePlayer()
     {
-        if( cc.isGrounded ) moveDirection.y -= gravity * Time.deltaTime;
+        if( !cc.isGrounded ) moveDirection.y -= gravity * Time.deltaTime;
+        else moveDirection.y = 0;
         cc.Move(moveDirection * Time.deltaTime);
     }
 

@@ -9,7 +9,7 @@ public class SpriteRotator : MonoBehaviour
 
     void Start()
     {
-        pt = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        pt = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
     }
 
     void Update()
