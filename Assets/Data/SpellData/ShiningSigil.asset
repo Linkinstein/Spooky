@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5da9965a654e3a4486755f02c914b0f, type: 3}
+  m_Name: ShiningSigil
+  m_EditorClassIdentifier: 
+  hand1: {fileID: 21300000, guid: 684d833841b475442863d5a1dcd296cf, type: 3}
+  hand2: {fileID: 21300000, guid: 6efcece52174e574f802a4b287bec44d, type: 3}
+  spellName: Shining Sigil
+  spellDescription: Places a sigil on the ground. \n\nIt can illuminate it's surrounding,
+    but the sigil will dissipate in a few seconds.
