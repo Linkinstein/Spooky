@@ -16,12 +16,17 @@ public class Hands : MonoBehaviour
 
     private bool paused
     { 
-        get { return gm != null && gm.paused; }
+        get 
+        { 
+            if (gm != null)
+                return gm.paused; 
+            else return false;
+        }
     }
 
     private void Start()
     {
-        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        if (GameObject.FindWithTag("GameManager") != null) gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         sr = GetComponent<SpriteRenderer>();
     }
 

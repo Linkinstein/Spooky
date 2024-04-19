@@ -18,7 +18,7 @@ public class EquipmentManager : MonoBehaviour
 
     private void Start()
     {
-        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        if (GameObject.FindWithTag("GameManager") != null) gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         currWeapon = transform.GetChild(0).gameObject;
     }
 
@@ -30,7 +30,7 @@ public class EquipmentManager : MonoBehaviour
             {
                 Destroy(currWeapon);
                 currWeapon = Instantiate(weapons[0], transform.position, Quaternion.identity, transform);
-                currWeapon.transform.localPosition = Vector3.zero;
+                currWeapon.transform.localPosition = new Vector3(0.3f, 0, 0.75f);
                 currWeapon.transform.rotation = transform.rotation;
                 currWeaponIndex = 1;
             }
