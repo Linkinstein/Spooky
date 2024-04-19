@@ -5,6 +5,7 @@ using UnityEngine;
 public class HandManager : MonoBehaviour
 {
     private GameManager gm;
+    private CharacterVitals cv;
     [SerializeField] private GameObject leftHand;
     [SerializeField] private GameObject rightHand;
     private Hands lHand;
@@ -26,6 +27,7 @@ public class HandManager : MonoBehaviour
     void Start()
     {
         if (GameObject.FindWithTag("GameManager") != null) gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        if (GameObject.FindWithTag("Player") != null) cv = GameObject.FindWithTag("Player").GetComponent<CharacterVitals>();
         lHand = leftHand.GetComponent<Hands>();
         rHand = rightHand.GetComponent<Hands>();
     }

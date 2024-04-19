@@ -43,15 +43,15 @@ public class UIManager : MonoBehaviour
         if (!cinematic)
         {
             // 0 Diary
-            if (Input.GetKeyDown(KeyCode.Z)) toggleMenu(paused, 0);
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Escape)) toggleMenu(paused, 0);
             // 1 Map
-            if (Input.GetKeyDown(KeyCode.Tab)|| Input.GetKeyDown(KeyCode.M)) toggleMenu(paused, 1);
+            if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.M)) toggleMenu(paused, 1);
             // 2 Notes
             if (Input.GetKeyDown(KeyCode.X)) toggleMenu(paused, 2);
             // 3 Spells
             if (Input.GetKeyDown(KeyCode.C)) toggleMenu(paused, 3);
             // 4 Inventory
-            if (Input.GetKeyDown(KeyCode.I)|| Input.GetKeyDown(KeyCode.B)) toggleMenu(paused, 4);
+            if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.B)) toggleMenu(paused, 4);
             // 5 Key Items
             if (Input.GetKeyDown(KeyCode.V)) toggleMenu(paused, 5);
         }
