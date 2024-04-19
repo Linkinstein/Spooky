@@ -22,9 +22,7 @@ public class VitalsBarUI : MonoBehaviour
             float t = 0f;
             if (mp)  t = cv.mp/100f;
             else t = cv.hp/100f;
-            Debug.Log(t);
             img.fillAmount = t;
         }
-
     }
 }

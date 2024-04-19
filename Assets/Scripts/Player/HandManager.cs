@@ -70,17 +70,19 @@ public class HandManager : MonoBehaviour
         {
             Debug.Log("2 3");
         }
-        else if (handSigns == new Vector2(3, 1))
+        else if (handSigns == new Vector2(3, 1) && cv.mp >= 10)
         {
             //Vector3 spawnPosition = transform.position + transform.forward;
             GameObject instanceObj = Instantiate(lightOrb, transform.position, Quaternion.identity);
             instanceObj.transform.rotation = transform.rotation;
+            ExpendMana(10);
         }
-        else if (handSigns == new Vector2(3, 2))
+        else if (handSigns == new Vector2(3, 2) && cv.mp >= 25)
         {
             Vector3 spawnPosition = transform.position + new Vector3(0, -2, 0);
             GameObject instanceObj = Instantiate(lightSigil, spawnPosition, Quaternion.identity);
             instanceObj.transform.Rotate(new Vector3(90, 0, 0), Space.World);
+            ExpendMana(25);
         }
         else if (handSigns == new Vector2(3, 3))
         {
@@ -88,5 +90,13 @@ public class HandManager : MonoBehaviour
         }
         lHand.ResetHand();
         rHand.ResetHand();
+    }
+
+    private void ExpendMana(int i)
+    {
+        if (cv != null)
+        {
+            cv.mp -= i;
+        }
     }
 }
