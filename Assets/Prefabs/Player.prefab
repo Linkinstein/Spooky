@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1954371412430220264}
   - component: {fileID: 6421156241713848299}
   - component: {fileID: 2580440628232353070}
+  - component: {fileID: 1983130815942831645}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -107,7 +108,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6421156241713848299
@@ -147,13 +148,27 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 1.5
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1983130815942831645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2593605167445366168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9042438f17abcfc4e9fd581091d36bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
+  mp: 100
 --- !u!1 &4718411262864950287
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,8 +243,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5928005637132794179}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.000000065976195, y: 0, z: 0.00000016643165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -247,8 +262,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 10
+  m_Intensity: 3
+  m_Range: 3
   m_SpotAngle: 90
   m_InnerSpotAngle: 4
   m_CookieSize: 10
@@ -308,6 +323,7 @@ GameObject:
   - component: {fileID: 6290060271012001983}
   - component: {fileID: 206832302522353620}
   - component: {fileID: 2189854929104473159}
+  - component: {fileID: 80405330685534837}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -324,7 +340,7 @@ Transform:
   m_GameObject: {fileID: 6691080920810827602}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.812, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -371,7 +387,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 311
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -391,6 +407,24 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6691080920810827602}
   m_Enabled: 1
+--- !u!114 &80405330685534837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691080920810827602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc15582c9f947740a8d2122fa081fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iPrompt: {fileID: 0}
+  text: {fileID: 0}
+  interactionDistance: 1.75
+  interlayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &7101700796764590079
 GameObject:
   m_ObjectHideFlags: 0

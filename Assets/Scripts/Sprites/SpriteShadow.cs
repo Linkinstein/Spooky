@@ -8,7 +8,7 @@ public class SpriteShadow : MonoBehaviour
     private SpriteRenderer sr; 
     private Color dark = Color.black; 
     private Color bright = Color.white;
-    [SerializeField] private float maxDistance = 5f; 
+    [SerializeField] private float maxDistance = 10f; 
 
     void Start()
     {
