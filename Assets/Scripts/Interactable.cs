@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] public ItemData id;
+    [SerializeField] public ItemData item;
 
-    void Start()
-    {
-        
-    }
+    [SerializeField] private bool keyItem;
+    [SerializeField] private bool door;
+    [SerializeField] private bool consumable;
 
-    void Update()
-    {
-        
-    }
+    [SerializeField] private ItemData key4Door;
 
     public void interact()
     {
-        
+
+        if (keyItem) 
+        {
+            GameManager.Instance.keyItems.Add(item);
+            Destroy(gameObject);
+        }
+
+        if (door) 
+        {
+            
+        }
+
+        if (consumable)
+        {
+            GameManager.Instance.consumables.Add(item);
+            Destroy(gameObject);
+        }
     }
 }

@@ -45,3 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  cinematic: 0
+  spellsUnlocked: 000000000000010100
+  keyItems: []
+  consumables: []
+  amulet: {fileID: 0}

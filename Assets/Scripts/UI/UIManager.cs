@@ -6,46 +6,52 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    private GameManager gm;
-    [SerializeField] GameObject pauseUI;
-    [SerializeField] GameObject[] tabs;
+    public static UIManager Instance { get; private set; }
 
-    [SerializeField] GameObject[] spellTabGOs;
+    [SerializeField] private GameObject pauseUI;
+    [SerializeField] private GameObject[] tabs;
+
+    [SerializeField] private GameObject[] spellTabGOs;
+    [SerializeField] private GameObject[] keyTabGOs;
+    [SerializeField] private GameObject[] consumTabGOs;
 
     private bool paused
     { 
-        get 
-        { 
-            if (gm != null)
-                return gm.paused; 
-            else return false;
-        }
-        set { if (gm != null) gm.paused = value; }
+        get { return GameManager.Instance.paused; }
+        set { GameManager.Instance.paused = value; }
     }
 
     private bool cinematic
     {
-        get
-        {
-            if (gm != null)
-                return gm.cinematic;
-            else return false;
-        }
+        get { return GameManager.Instance.cinematic; }
     }
 
-    private void Start()
+    private void Awake()
     {
-        if (GameObject.FindWithTag("GameManager") != null) gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
     {
         if (!cinematic)
         {
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                if (!paused) toggleMenu(paused,1);
+                else toggleMenu(paused);
+            }
+
             // 0 Diary
             if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Escape)) toggleMenu(paused, 0);
             // 1 Map
-            if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.M)) toggleMenu(paused, 1);
+            if (Input.GetKeyDown(KeyCode.M)) toggleMenu(paused, 1);
             // 2 Notes
             if (Input.GetKeyDown(KeyCode.X)) toggleMenu(paused, 2);
             // 3 Spells
@@ -54,6 +60,24 @@ public class UIManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.B)) toggleMenu(paused, 4);
             // 5 Key Items
             if (Input.GetKeyDown(KeyCode.V)) toggleMenu(paused, 5);
+        }
+    }
+
+    public void toggleMenu(bool on)
+    {
+        if (!on)
+        {
+            paused = true;
+            pauseUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            paused = false;
+            pauseUI.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
@@ -95,5 +119,19 @@ public class UIManager : MonoBehaviour
         string description = sd.spellDescription;
         description = description.Replace("\\n", "\n");
         spellTabGOs[3].GetComponent<TextMeshProUGUI>().SetText(description);
+    }
+
+    public void displayKey(ItemData id)
+    {
+        jumpToTab(5);
+        keyTabGOs[0].GetComponent<Image>().sprite = id.itemImage;
+        keyTabGOs[1].GetComponent<TextMeshProUGUI>().SetText(id.itemName);
+        string description = id.itemDescription;
+        description = description.Replace("\\n", "\n");
+        keyTabGOs[2].GetComponent<TextMeshProUGUI>().SetText(description);
+    }
+
+    public void displayConsumable(ItemData id)
+    {
     }
 }

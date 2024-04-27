@@ -16,11 +16,12 @@ public class Interactor : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance, interlayer))
         {
-            Interactable item = hit.collider.GetComponent<Interactable>();
-            if (item != null)
+            Interactable interactable = hit.collider.GetComponent<Interactable>();
+            if (interactable != null)
             {
                 iPrompt.SetActive(true);
-                text.SetText(item.id.Verb + " " + item.id.ItemName);
+                text.SetText(interactable.item.verb + " " + interactable.item.itemName);
+                if (Input.GetKeyDown(KeyCode.E)) interactable.interact();
             }
         }
         else iPrompt.SetActive(false);

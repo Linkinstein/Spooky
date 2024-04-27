@@ -30,7 +30,7 @@ public class EquipmentManager : MonoBehaviour
             {
                 Destroy(currWeapon);
                 currWeapon = Instantiate(weapons[0], transform.position, Quaternion.identity, transform);
-                currWeapon.transform.localPosition = new Vector3(0.3f, 0, 0.75f);
+                currWeapon.transform.localPosition = new Vector3(0f, 0, 0.75f);
                 currWeapon.transform.rotation = transform.rotation;
                 currWeaponIndex = 1;
             }

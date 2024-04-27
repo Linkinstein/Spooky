@@ -79,7 +79,7 @@ public class HandManager : MonoBehaviour
         }
         else if (handSigns == new Vector2(3, 2) && cv.mp >= 25)
         {
-            Vector3 spawnPosition = transform.position + new Vector3(0, -1.5f, 0);
+            Vector3 spawnPosition = transform.position + new Vector3(0, -1.2f, 0);
             GameObject instanceObj = Instantiate(lightSigil, spawnPosition, Quaternion.identity);
             instanceObj.transform.Rotate(new Vector3(90, 0, 0), Space.World);
             ExpendMana(25);

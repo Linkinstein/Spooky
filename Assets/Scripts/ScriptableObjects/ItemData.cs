@@ -5,11 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New ItemData", menuName = "ItemData")]
 public class ItemData : ScriptableObject
 {
-    [SerializeField] public Sprite ItemImage;
+    [SerializeField] public Sprite itemImage;
 
-    [SerializeField] public string ItemName;
+    [SerializeField] public string itemName;
 
-    [SerializeField] public string ItemDescription;
+    [SerializeField] public string itemDescription;
 
-    [SerializeField] public string Verb;
+    [SerializeField] public string verb;
 }
