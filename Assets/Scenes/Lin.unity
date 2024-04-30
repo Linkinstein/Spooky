@@ -2170,14 +2170,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster1
       objectReference: {fileID: 0}
-    - target: {fileID: 4854006105685990864, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6a7e5d802792c6746ba603d396f5e3f1, type: 2}
-    - target: {fileID: 5164043724550099468, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7992122884813618845, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2188,7 +2180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7992122884813618845, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.13
+      value: 2.119
       objectReference: {fileID: 0}
     - target: {fileID: 7992122884813618845, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2216,10 +2208,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7992122884813618845, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9215487955412686095, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
-      propertyPath: waypoints.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -61,9 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbbc8fd243be6ec46ba2926ef6013495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  waypoints: []
 --- !u!136 &7704998444366669477
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -119,7 +117,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7104706908739482418}
   - component: {fileID: 4854006105685990864}
-  - component: {fileID: 5164043724550099468}
   - component: {fileID: 1926101764539940547}
   - component: {fileID: 102363575196577202}
   m_Layer: 0
@@ -164,7 +161,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6a7e5d802792c6746ba603d396f5e3f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -196,19 +193,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5164043724550099468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5152565534625663263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24944805f3b601248b2520d1729f2a27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 5
 --- !u!114 &1926101764539940547
 MonoBehaviour:
   m_ObjectHideFlags: 0
