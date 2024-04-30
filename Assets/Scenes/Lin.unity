@@ -2155,6 +2155,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5194065694189572913, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5194065694189572913, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -2200,7 +2204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8087030805369329183, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087030805369329183, guid: 56f1b59640f641e4e8e03e1eeea2704a, type: 3}
+      propertyPath: m_TagString
+      value: Damage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
