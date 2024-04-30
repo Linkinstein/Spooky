@@ -25,4 +25,12 @@ public class CharacterVitals : MonoBehaviour
         else mp += 5;
         recharging = false;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Damage")
+        { 
+            hp -= 25;
+        }
+    }
 }
