@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MovementControls : MonoBehaviour
 {
-    private GameManager gm;
+    public static MovementControls Instance { get; private set; }
 
     [Header("Movement Parameters")]
     [SerializeField] private float walkSpeed = 3.0f;
     [SerializeField] private float gravity = 10.0f;
 
     [Header("Look Parameters")]
-    [SerializeField, Range(1, 10)] private float lookSpeedX = 2.0f;
-    [SerializeField, Range(1, 10)] private float lookSpeedY = 2.0f;
+    private float lookSpeedX = 2.0f;
+    private float lookSpeedY = 2.0f;
     [SerializeField, Range(1, 180)] private float upperLookLimit = 80.0f;
     [SerializeField, Range(1, 180)] private float lowerLookLimit = 80.0f;
 
@@ -25,18 +25,31 @@ public class MovementControls : MonoBehaviour
     private Vector2 currentInput;
 
     private bool paused
+    { get { return GameManager.Instance.paused; } }
+
+    public float lookSpeed
     {
-        get
+        set 
         {
-            if (gm != null)
-                return gm.paused;
-            else return false;
+            lookSpeedX = value;
+            lookSpeedY = value;
+        }
+    }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
     private void Start()
     {
-        if (GameObject.FindWithTag("GameManager") != null) gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         cam = GetComponentInChildren<Camera>();
         cc = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;

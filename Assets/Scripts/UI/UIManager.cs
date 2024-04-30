@@ -49,7 +49,7 @@ public class UIManager : MonoBehaviour
             }
 
             // 0 Diary
-            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Escape)) toggleMenu(paused, 0);
+            if (Input.GetKeyDown(KeyCode.Z)) toggleMenu(paused, 0);
             // 1 Map
             if (Input.GetKeyDown(KeyCode.M)) toggleMenu(paused, 1);
             // 2 Notes
@@ -60,6 +60,8 @@ public class UIManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.B)) toggleMenu(paused, 4);
             // 5 Key Items
             if (Input.GetKeyDown(KeyCode.V)) toggleMenu(paused, 5);
+            // 6 Settings
+            if (Input.GetKeyDown(KeyCode.Escape)) toggleMenu(paused, 6);
         }
     }
 
