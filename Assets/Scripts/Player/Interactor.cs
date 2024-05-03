@@ -20,7 +20,7 @@ public class Interactor : MonoBehaviour
             if (interactable != null)
             {
                 iPrompt.SetActive(true);
-                text.SetText(interactable.item.verb + " " + interactable.item.itemName);
+                text.SetText(interactable.iVerb + " " + interactable.iName);
                 if (Input.GetKeyDown(KeyCode.E)) interactable.interact();
             }
         }

@@ -7,6 +7,7 @@ public class EquipmentManager : MonoBehaviour
     private GameManager gm;
     [SerializeField] private GameObject[] weapons;
     [SerializeField] private bool[] weaponsAcquired;
+    [SerializeField] private bool canGun = false;
 
     private GameObject currWeapon;
     private int currWeaponIndex = 1;
@@ -34,7 +35,7 @@ public class EquipmentManager : MonoBehaviour
                 currWeaponIndex = 1;
             }
 
-            if (Input.GetKey(KeyCode.Alpha2) && currWeaponIndex != 2)
+            if (Input.GetKey(KeyCode.Alpha2) && currWeaponIndex != 2 && canGun)
             {
                 Destroy(currWeapon);
                 currWeapon = Instantiate(weapons[1], transform.position, Quaternion.identity, transform);

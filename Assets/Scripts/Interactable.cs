@@ -10,7 +10,18 @@ public class Interactable : MonoBehaviour
     [SerializeField] private bool door;
     [SerializeField] private bool consumable;
 
-    [SerializeField] private ItemData key4Door;
+    public string iName
+    { get { return item.itemName; } }
+
+    public string iVerb
+    { 
+        get 
+        {
+            if (door) return "Requires";
+            else return item.verb;
+        } 
+    }
+
 
     public void interact()
     {
@@ -23,7 +34,13 @@ public class Interactable : MonoBehaviour
 
         if (door) 
         {
-            
+            foreach (ItemData id in GameManager.Instance.keyItems)
+            {
+                if (id.itemName.Equals(item.itemName))
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
 
         if (consumable)

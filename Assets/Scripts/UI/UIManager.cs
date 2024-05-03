@@ -8,22 +8,28 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
 
+    [SerializeField] private GameObject screenUI;
     [SerializeField] private GameObject pauseUI;
+    [SerializeField] private GameObject deathUI;
     [SerializeField] private GameObject[] tabs;
 
     [SerializeField] private GameObject[] spellTabGOs;
     [SerializeField] private GameObject[] keyTabGOs;
     [SerializeField] private GameObject[] consumTabGOs;
 
+    private GameManager gm
+    { get { return GameManager.Instance; } }
+
     private bool paused
     { 
-        get { return GameManager.Instance.paused; }
-        set { GameManager.Instance.paused = value; }
+        get { return gm.paused; }
+        set { gm.paused = value; }
     }
 
     private bool cinematic
     {
-        get { return GameManager.Instance.cinematic; }
+        get { return gm.cinematic; }
+        set { gm.cinematic = value; }
     }
 
     private void Awake()
@@ -35,6 +41,12 @@ public class UIManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+
+        if (gm != null)
+        { 
+            gm.paused = false;
+            gm.cinematic = false;
         }
     }
 
@@ -135,5 +147,16 @@ public class UIManager : MonoBehaviour
 
     public void displayConsumable(ItemData id)
     {
+    }
+
+    public void Death()
+    { 
+        screenUI.SetActive(false);
+        pauseUI.SetActive(false);
+        deathUI.SetActive(true);
+        paused = true;
+        cinematic = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

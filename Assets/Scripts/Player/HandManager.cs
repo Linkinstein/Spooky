@@ -4,29 +4,19 @@ using UnityEngine;
 
 public class HandManager : MonoBehaviour
 {
-    private GameManager gm;
     private CharacterVitals cv;
     [SerializeField] private GameObject leftHand;
     [SerializeField] private GameObject rightHand;
     private Hands lHand;
     private Hands rHand;
 
-    [SerializeField] private GameObject lightOrb;
-    [SerializeField] private GameObject lightSigil;
+    [SerializeField] private GameObject[] spells;
 
     private bool paused
-    {
-        get
-        {
-            if (gm != null)
-                return gm.paused;
-            else return false;
-        }
-    }
+    { get { return GameManager.Instance.paused; } }
 
     void Start()
     {
-        if (GameObject.FindWithTag("GameManager") != null) gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         if (GameObject.FindWithTag("Player") != null) cv = GameObject.FindWithTag("Player").GetComponent<CharacterVitals>();
         lHand = leftHand.GetComponent<Hands>();
         rHand = rightHand.GetComponent<Hands>();
@@ -54,9 +44,12 @@ public class HandManager : MonoBehaviour
         {
             Debug.Log("1 2");
         }
-        else if (handSigns == new Vector2(1, 3))
+        else if (handSigns == new Vector2(1, 3) && cv.mp >= 60)
         {
-            Debug.Log("1 3");
+            Vector3 spawnPosition = transform.position + transform.forward;
+            GameObject instanceObj = Instantiate(spells[3], spawnPosition, Quaternion.identity);
+            instanceObj.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            ExpendMana(60);
         }
         else if (handSigns == new Vector2(2, 1))
         {
@@ -72,21 +65,23 @@ public class HandManager : MonoBehaviour
         }
         else if (handSigns == new Vector2(3, 1) && cv.mp >= 10)
         {
-            //Vector3 spawnPosition = transform.position + transform.forward;
-            GameObject instanceObj = Instantiate(lightOrb, transform.position, Quaternion.identity);
+            GameObject instanceObj = Instantiate(spells[0], transform.position, Quaternion.identity);
             instanceObj.transform.rotation = transform.rotation;
             ExpendMana(10);
         }
         else if (handSigns == new Vector2(3, 2) && cv.mp >= 25)
         {
             Vector3 spawnPosition = transform.position + new Vector3(0, -1.2f, 0);
-            GameObject instanceObj = Instantiate(lightSigil, spawnPosition, Quaternion.identity);
+            GameObject instanceObj = Instantiate(spells[1], spawnPosition, Quaternion.identity);
             instanceObj.transform.Rotate(new Vector3(90, 0, 0), Space.World);
             ExpendMana(25);
         }
-        else if (handSigns == new Vector2(3, 3))
-        {
-            Debug.Log("3 3");
+        else if (handSigns == new Vector2(3, 3) && cv.mp >= 40)
+        { 
+            Vector3 spawnPosition = transform.position + transform.forward;
+            GameObject instanceObj = Instantiate(spells[2], spawnPosition, Quaternion.identity);
+            instanceObj.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            ExpendMana(40);
         }
         lHand.ResetHand();
         rHand.ResetHand();
@@ -96,7 +91,7 @@ public class HandManager : MonoBehaviour
     {
         if (cv != null)
         {
-            cv.mp -= i;
+            cv.UseMP(i);
         }
     }
 }

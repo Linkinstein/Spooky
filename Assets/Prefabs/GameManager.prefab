@@ -46,7 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paused: 0
   cinematic: 0
-  spellsUnlocked: 000000000000010100
+  spellsUnlocked: 000001000000010101
+  objectives:
+  - Test Objective 1
+  - Test Objective 2
+  - Test Objective 3
+  objectivesIndex: 0
   keyItems: []
   consumables: []
-  amulet: {fileID: 0}
+  amulet: {fileID: 11400000, guid: c961faa53fef4024aa073a792293c4a6, type: 2}

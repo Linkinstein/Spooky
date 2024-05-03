@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class SpellProjectile : MonoBehaviour
 {
     [SerializeField] public float speed = 10f;
-    public Vector3 direction;
+    [SerializeField] private bool fragile = false;
+    private Vector3 direction;
 
     private void Start()
     {
@@ -19,6 +20,6 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision != null) Destroy(this.gameObject);
+        if (collision != null && fragile) Destroy(this.gameObject);
     }
 }

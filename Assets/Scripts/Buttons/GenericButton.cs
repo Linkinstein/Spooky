@@ -28,8 +28,8 @@ public class GenericButton : MonoBehaviour
 
     public void Play()
     {
-        if (GameObject.FindWithTag("GameManager") != null) GameObject.FindWithTag("GameManager").GetComponent<GameManager>().paused = false;
-        SceneManager.LoadScene(1);
+        if (GameManager.Instance != null) GameManager.Instance.StartNew();
+        else SceneManager.LoadScene(1);
     }
 
     public void Back2Menu()

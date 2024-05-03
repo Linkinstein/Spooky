@@ -256,5 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHand: {fileID: 5666666356750809093}
   rightHand: {fileID: 4739461742723625556}
-  lightOrb: {fileID: 389881913747542418, guid: de931625981516542aee78e60b393bae, type: 3}
-  lightSigil: {fileID: 840023261889683488, guid: c706756c10ebfab4ea60cc99dbc53ad8, type: 3}
+  spells:
+  - {fileID: 389881913747542418, guid: de931625981516542aee78e60b393bae, type: 3}
+  - {fileID: 840023261889683488, guid: c706756c10ebfab4ea60cc99dbc53ad8, type: 3}
+  - {fileID: 5254677825148562635, guid: f8d9ee5f6817e7e46a8b2904624c247d, type: 3}

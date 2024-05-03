@@ -16,13 +16,20 @@ public class Monster : MonoBehaviour
     private AngleToPlayer atp;
     private bool waiting = false;
 
+    private bool chasing = false;
     private bool attacking = false;
     [SerializeField] GameObject atkCube;
 
     private Vector3 playerPOS
-    { get { return fov.playerRef.transform.position; } }
+    { 
+        get 
+        { 
+            if (fov.playerRef != null) return fov.playerRef.transform.position; 
+            else return transform.position;
+        } 
+    }
 
-    private bool chasing 
+    private bool seePlayer 
     { get { return fov.canSeePlayer; } }
 
     private void Start()
@@ -37,24 +44,36 @@ public class Monster : MonoBehaviour
     private void Update()
     {
         spriteAnim.SetFloat("spriteRot", atp.lastIndex);
-        if (target != null && Vector3.Distance(transform.position, target) < 1 && !waiting && !chasing)
+
+        if (!seePlayer && chasing)
         {
-            StartCoroutine(patrolWait());
+            StartCoroutine(chaseWait());
         }
 
-        if (chasing && Vector3.Distance(transform.position, playerPOS) > 2.5f )
+        if (seePlayer && Vector3.Distance(transform.position, playerPOS) > 2.5f )
         {
+            chasing = true;
             agent.SetDestination(playerPOS);
         }
-        if (chasing && Vector3.Distance(transform.position, playerPOS) < 2.5f && !attacking)
+
+        if (seePlayer && Vector3.Distance(transform.position, playerPOS) < 2.5f && !attacking)
         {
             StartCoroutine(attack());
         }
+
+        if (waypoints != null && Vector3.Distance(transform.position, target) < 1 && !waiting && !chasing)
+        {
+            StartCoroutine(patrolWait());
+        }
     }
+
     private void UpdateDestination()
     {
-        target = waypoints[waypointIndex].position;
-        agent.SetDestination(target);
+        if (waypoints.Length != 0)
+        {
+            target = waypoints[waypointIndex].position;
+            agent.SetDestination(target);
+        }
     }
     private void IteratewaypointIndex()
     {
@@ -84,7 +103,17 @@ public class Monster : MonoBehaviour
         {
             IteratewaypointIndex();
             UpdateDestination();
-            waiting = false;
+        }
+        waiting = false;
+    }
+
+    private IEnumerator chaseWait()
+    {
+        yield return new WaitForSeconds(5f);
+        if (!seePlayer)
+        {
+            chasing = false;
+            UpdateDestination();
         }
     }
 }
