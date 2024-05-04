@@ -3049,8 +3049,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1086429900481364193}
   m_HandleRect: {fileID: 6059104123798820456}
   m_Direction: 2
-  m_Value: 0.99999994
-  m_Size: 0.22558905
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3482,7 +3482,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.000091552734, y: 0.000091552734}
-  m_SizeDelta: {x: -20, y: -689.84}
+  m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &4167194986862768056
 CanvasRenderer:
@@ -6046,7 +6046,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826859635774775952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -6802,6 +6802,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3587652793251013092, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3731796366090612941, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7038,7 +7042,7 @@ PrefabInstance:
       objectReference: {fileID: -5104866955472966465, guid: 740823af80a75e1478cdfbec7eff2c5c, type: 2}
     - target: {fileID: 7758395129277599675, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7812980198944917142, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_fontAsset
