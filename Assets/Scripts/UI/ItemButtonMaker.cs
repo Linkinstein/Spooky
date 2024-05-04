@@ -9,6 +9,9 @@ public class ItemButtonMaker : MonoBehaviour
     [SerializeField] private GameObject itemButtonPrefab;
 
     [SerializeField] private bool key;
+    [SerializeField] private bool note;
+
+    [SerializeField]
 
     void OnEnable()
     {
@@ -26,6 +29,19 @@ public class ItemButtonMaker : MonoBehaviour
                 ItemButton ib = prefab.GetComponent<ItemButton>();
                 ib.id = item;
                 ib.key = key;
+                ib.note = note;
+            }
+        }
+        else if (note) 
+        {
+            foreach (ItemData item in GameManager.Instance.notes)
+            {
+                GameObject prefab = Instantiate(itemButtonPrefab, transform.position, Quaternion.identity);
+                prefab.transform.SetParent(this.gameObject.transform, false);
+                ItemButton ib = prefab.GetComponent<ItemButton>();
+                ib.id = item;
+                ib.key = key;
+                ib.note = note;
             }
         }
         else
@@ -37,6 +53,7 @@ public class ItemButtonMaker : MonoBehaviour
                 ItemButton ib = prefab.GetComponent<ItemButton>();
                 ib.id = item;
                 ib.key = key;
+                ib.note = note;
             }
         }
 

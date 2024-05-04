@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject[] spellTabGOs;
     [SerializeField] private GameObject[] keyTabGOs;
+    [SerializeField] private GameObject[] noteTabGOs;
     [SerializeField] private GameObject[] consumTabGOs;
 
     private GameManager gm
@@ -145,8 +146,24 @@ public class UIManager : MonoBehaviour
         keyTabGOs[2].GetComponent<TextMeshProUGUI>().SetText(description);
     }
 
+    public void displayNote(ItemData id)
+    {
+        jumpToTab(2);
+        noteTabGOs[0].GetComponent<TextMeshProUGUI>().SetText(id.itemName);
+        string description = id.itemDescription;
+        description = description.Replace("\\n", "\n");
+        noteTabGOs[1].GetComponent<TextMeshProUGUI>().SetText(description);
+    }
+
     public void displayConsumable(ItemData id)
     {
+        jumpToTab(4);
+        consumTabGOs[0].GetComponent<Image>().sprite = id.itemImage;
+        consumTabGOs[1].GetComponent<TextMeshProUGUI>().SetText(id.itemName);
+        string description = id.itemDescription;
+        description = description.Replace("\\n", "\n");
+        consumTabGOs[2].GetComponent<TextMeshProUGUI>().SetText(description);
+        consumTabGOs[3].GetComponent<ItemUseButton>().itemName = id.itemName;
     }
 
     public void Death()

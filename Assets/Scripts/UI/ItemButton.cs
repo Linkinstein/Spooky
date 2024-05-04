@@ -9,6 +9,7 @@ public class ItemButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Image imgUi;
     [SerializeField] public bool key;
+    [SerializeField] public bool note;
 
     private ItemData _id;
 
@@ -33,6 +34,7 @@ public class ItemButton : MonoBehaviour
     private void displayItem()
     {
         if (key) UIManager.Instance.displayKey(_id);
+        else if (note) UIManager.Instance.displayNote(_id);
         else UIManager.Instance.displayConsumable(_id);
     }
 }

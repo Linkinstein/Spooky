@@ -6,9 +6,12 @@ public class Interactable : MonoBehaviour
 {
     [SerializeField] public ItemData item;
 
+    [SerializeField] private bool willProgress;
+    [Space]
     [SerializeField] private bool keyItem;
     [SerializeField] private bool door;
     [SerializeField] private bool consumable;
+    [SerializeField] private bool note;
 
     public string iName
     { get { return item.itemName; } }
@@ -26,27 +29,33 @@ public class Interactable : MonoBehaviour
     public void interact()
     {
 
-        if (keyItem) 
-        {
-            GameManager.Instance.keyItems.Add(item);
-            Destroy(gameObject);
-        }
-
         if (door) 
         {
             foreach (ItemData id in GameManager.Instance.keyItems)
             {
                 if (id.itemName.Equals(item.itemName))
                 {
+                    if (willProgress) Progress();
                     Destroy(gameObject);
                 }
             }
         }
 
-        if (consumable)
+        if (keyItem || consumable || note)
         {
-            GameManager.Instance.consumables.Add(item);
+            if (keyItem) GameManager.Instance.keyItems.Add(item);
+            if (consumable) GameManager.Instance.consumables.Add(item);
+            if (note) GameManager.Instance.notes.Add(item);
+
+            if (willProgress) Progress();
             Destroy(gameObject);
         }
+
+    }
+
+    private void Progress()
+    {
+        if (GameManager.Instance != null) GameManager.Instance.objectivesIndex++;
+        
     }
 }

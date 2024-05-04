@@ -12,5 +12,6 @@ public class SpellData : ScriptableObject
 
     [SerializeField] public string spellName;
 
+    [TextArea(10, 30)]
     [SerializeField] public string spellDescription;
 }

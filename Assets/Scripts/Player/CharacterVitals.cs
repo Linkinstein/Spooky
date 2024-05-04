@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterVitals : MonoBehaviour
 {
+    public static CharacterVitals Instance { get; private set; }
+
     public int hp = 100;
     public int mp = 100;
 
@@ -11,6 +13,18 @@ public class CharacterVitals : MonoBehaviour
 
 
     private bool recharging = false;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Update()
     {

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6741d109139046e48a1154a02ced038f, type: 3}
-  m_Name: Amulet
+  m_Name: Small Health Potion
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
-  itemName: Amulet
-  itemDescription: Strange amulet that allows you to cast spells
-  verb: 
+  itemName: Small Health Potion
+  itemDescription: Heals yo ass up test
+  verb: Take

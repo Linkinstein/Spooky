@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public List<ItemData> keyItems = new List<ItemData>();
     public List<ItemData> consumables = new List<ItemData>();
+    public List<ItemData> notes = new List<ItemData>();
 
     //delete later
     [SerializeField] private ItemData amulet;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         objectivesIndex = 0;
         keyItems = new List<ItemData>();
         consumables = new List<ItemData>();
+        notes = new List<ItemData>();
         keyItems.Add(amulet);
         SceneManager.LoadScene(1);
     }
