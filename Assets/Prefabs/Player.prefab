@@ -2363,7 +2363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 10, y: 0.000061035156}
   m_SizeDelta: {x: 450, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &9204200329031813834
@@ -3050,7 +3050,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6059104123798820456}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.05097113
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3481,8 +3481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000091552734, y: 0.000091552734}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -0.000091552734, y: -0.000030517578}
+  m_SizeDelta: {x: -20, y: -689.84}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &4167194986862768056
 CanvasRenderer:
@@ -3877,7 +3877,7 @@ RectTransform:
   m_Father: {fileID: 6358588443053457818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.050974317}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4749,7 +4749,7 @@ RectTransform:
   m_Father: {fileID: 8797927278142468928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.05097113}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5109,7 +5109,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7440754207153460260}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.050974317
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7042,7 +7042,7 @@ PrefabInstance:
       objectReference: {fileID: -5104866955472966465, guid: 740823af80a75e1478cdfbec7eff2c5c, type: 2}
     - target: {fileID: 7758395129277599675, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7812980198944917142, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_fontAsset
