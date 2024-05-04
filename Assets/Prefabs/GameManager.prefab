@@ -53,5 +53,8 @@ MonoBehaviour:
   - Test Objective 3
   objectivesIndex: 0
   keyItems: []
-  consumables: []
+  consumables:
+  - {fileID: 11400000, guid: fe5e40ecb30c1a243be137cc25784243, type: 2}
+  notes:
+  - {fileID: 11400000, guid: 9d09021a9ef7df5409ee67bd56f98c80, type: 2}
   amulet: {fileID: 11400000, guid: c961faa53fef4024aa073a792293c4a6, type: 2}
