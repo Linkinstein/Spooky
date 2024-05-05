@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6741d109139046e48a1154a02ced038f, type: 3}
-  m_Name: PRG_Note_00
+  m_Name: SideObjKey_01
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
-  itemName: Spare Key
+  itemName: Cafeteria Key
   verb: Take
-  itemDescription: Armory has spare key to get out.
+  itemDescription: Key used to access the Prisoners Cafeteria. Looks pretty grimy
+    and sticky despite its vibrant orange color.

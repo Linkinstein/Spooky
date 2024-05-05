@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6741d109139046e48a1154a02ced038f, type: 3}
-  m_Name: Note_00
+  m_Name: Note_02
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
-  itemName: Warden's Spare
-  verb: Stern word on
-  itemDescription: I just find it really stupid that the damn Warden would have a
-    backup of his own key, knowing full well that his quarters houses the most essential
-    things to keep this shitbox of a facility afloat.
+  itemName: Journal 2
+  verb: Staff
+  itemDescription: "Something's wrong with REDACTED, guy was pale as snow and the
+    dumb fuck shat on my bed last night. So now I gotta sleep on the floor. \n\nTo
+    be fair to his punk ass, I ain't feeling too sharp as well, no part of me feels
+    good, and I doubt I'm gonna feel any better. "

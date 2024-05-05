@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6741d109139046e48a1154a02ced038f, type: 3}
-  m_Name: Note_00
+  m_Name: ObjKey_00
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
-  itemName: Warden's Spare
-  verb: Stern word on
-  itemDescription: I just find it really stupid that the damn Warden would have a
-    backup of his own key, knowing full well that his quarters houses the most essential
-    things to keep this shitbox of a facility afloat.
+  itemName: Staff Access Key
+  verb: Take
+  itemDescription: Staff Access Key used by the Prison Staff to unlock certain doors
+    around the facility.
