@@ -15,4 +15,4 @@ MonoBehaviour:
   itemImage: {fileID: 0}
   itemName: Getting Out
   verb: Note about
-  itemDescription: Armory has a spare Warden's key.
+  itemDescription: The armory has a spare key to the Warden's Quarters.
