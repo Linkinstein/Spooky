@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SideObjKey_01
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
-  itemName: Cafeteria Key
+  itemName: Cafeteria & Bedroom Key
   verb: Take
   itemDescription: Key used to access the Prisoners Cafeteria. Looks pretty grimy
     and sticky despite its vibrant orange color.
