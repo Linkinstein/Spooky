@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class SettingsSlider : MonoBehaviour
 {
-    [SerializeField] private PostProcessVolume v;
+    [SerializeField] private PostProcessProfile pp;
     [SerializeField] private MovementControls mc;
 
     private AutoExposure aE;
 
     private void OnEnable()
     {
-        v.profile.TryGetSettings(out aE);
+        pp.TryGetSettings(out aE);
     }
 
     public void ChangeMSensitivity(float i)
@@ -23,7 +23,7 @@ public class SettingsSlider : MonoBehaviour
 
     public void ChangeBrightness(float i)
     {
-        float lumiChange = 3f - ((i*2)/10f);
-        aE.minLuminance.value = lumiChange;
+        float brightness = 0.5f + (i/10f);
+        aE.keyValue.value = brightness;
     }
 }
