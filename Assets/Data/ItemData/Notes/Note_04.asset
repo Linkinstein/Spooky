@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Note_04
   m_EditorClassIdentifier: 
   itemImage: {fileID: 21300000, guid: b4160cf2a5c14ae42a15dc1a7925b545, type: 3}
-  itemName: Lore 04
-  verb: 
-  itemDescription: Lore 04 description.
+  itemName: The Changes
+  verb: Note on
+  itemDescription: 'I''ve cleaned more today than I have in my entire life. Day in,
+    day out, just pools of sick and blood, it''s almost neverending.
+
+
+    Ever since
+    those two groups came back in a few days ago, everything changed. It''s like
+    they brought back with them a plague that''s slowly making everyone, including
+    me, sick, and violent. '
