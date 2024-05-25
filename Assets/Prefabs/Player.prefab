@@ -877,6 +877,7 @@ GameObject:
   - component: {fileID: 6421156241713848299}
   - component: {fileID: 2580440628232353070}
   - component: {fileID: 1983130815942831645}
+  - component: {fileID: 8517091573470642774}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1032,6 +1033,102 @@ MonoBehaviour:
   hp: 100
   mp: 100
   mpCD: 0
+--- !u!82 &8517091573470642774
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2593605167445366168}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0f407ec7cbe99614e8d72d0ecb100ae2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2732930028243172812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,8 +3217,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eeae82ee2f741054db0f0b79166389e8, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b4160cf2a5c14ae42a15dc1a7925b545, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3482,7 +3579,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.000091552734, y: -0.000030517578}
-  m_SizeDelta: {x: -20, y: -689.84}
+  m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &4167194986862768056
 CanvasRenderer:
@@ -3628,7 +3725,7 @@ RectTransform:
   m_Father: {fileID: 8589581066016383091}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3877,7 +3974,7 @@ RectTransform:
   m_Father: {fileID: 6358588443053457818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.050974317}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4749,7 +4846,7 @@ RectTransform:
   m_Father: {fileID: 8797927278142468928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.05097113}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6599,12 +6696,22 @@ PrefabInstance:
       value: Decoy
       objectReference: {fileID: 0}
     - target: {fileID: 215494145779777881, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_text
+      value: 'Map
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 215494145779777881, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 740823af80a75e1478cdfbec7eff2c5c, type: 2}
     - target: {fileID: 215494145779777881, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5104866955472966465, guid: 740823af80a75e1478cdfbec7eff2c5c, type: 2}
+    - target: {fileID: 215494145779777881, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 258953762374893086, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_fontAsset
@@ -6642,6 +6749,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 578150500867085859, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 659030505830927721, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6690,6 +6801,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1790323826018523770, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790323826018523770, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b4160cf2a5c14ae42a15dc1a7925b545, type: 3}
     - target: {fileID: 1953888619144550479, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6745,6 +6864,14 @@ PrefabInstance:
     - target: {fileID: 2572418995861454851, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_Direction
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938215237624605677, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938215237624605677, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_Color.g
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2953148848605895335, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_fontAsset
@@ -6804,7 +6931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3587652793251013092, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3731796366090612941, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_IsActive
@@ -6938,11 +7065,11 @@ PrefabInstance:
       objectReference: {fileID: -5104866955472966465, guid: 740823af80a75e1478cdfbec7eff2c5c, type: 2}
     - target: {fileID: 6594727147906899069, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6594727147906899069, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6631016737963882274, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: deathUI
@@ -7040,6 +7167,18 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -5104866955472966465, guid: 740823af80a75e1478cdfbec7eff2c5c, type: 2}
+    - target: {fileID: 7525131781072243021, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525131781072243021, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525131781072243021, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.33962262
+      objectReference: {fileID: 0}
     - target: {fileID: 7758395129277599675, guid: 2c6643c8933e12442860060f6075d8b8, type: 3}
       propertyPath: m_IsActive
       value: 0

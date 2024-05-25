@@ -74,6 +74,7 @@ public class MovementControls : MonoBehaviour
     {
         get { return Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0; } 
     }
+
     private void StepSound()
     {
         if (isMoving)
@@ -111,5 +112,4 @@ public class MovementControls : MonoBehaviour
         cam.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
     }
-
 }
