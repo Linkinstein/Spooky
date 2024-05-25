@@ -3180,7 +3180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9849a3237bccb74a93bbf2138e3b01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  v: {fileID: 3971717407446583067}
+  pp: {fileID: 11400000, guid: f00e0d9ada141784f81eca29fd478d6a, type: 2}
   mc: {fileID: 6421156241713848299}
 --- !u!1 &5881559136302140368
 GameObject:
@@ -3257,7 +3257,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5928005637132794179}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0

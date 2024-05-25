@@ -29,10 +29,26 @@ public class ItemUseButton : MonoBehaviour
     {
         if (itemName != null) 
         {
-            if (itemName.Equals("Small Health Potion"))
+            if (itemName.Equals("Red Vial"))
             { 
                 if((cv.hp + 25) > 100) cv.hp = 100; 
                 else cv.hp += 25;
+            }
+
+            if (itemName.Equals("Red Bottle"))
+            {
+                cv.hp = 100;
+            }
+
+            if (itemName.Equals("Blue Vial"))
+            {
+                if ((cv.mp + 50) > 100) cv.mp = 100;
+                else cv.mp += 50;
+            }
+
+            if (itemName.Equals("Blue Bottle"))
+            {
+                cv.mp = 100;
             }
 
 
@@ -41,6 +57,7 @@ public class ItemUseButton : MonoBehaviour
                 if (gm.consumables[i].itemName == itemName)
                 {
                     gm.consumables.RemoveAt(i);
+                    break;
                 }
             }
 
