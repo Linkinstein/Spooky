@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6741d109139046e48a1154a02ced038f, type: 3}
+  m_Name: Note_09
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 0}
+  itemName: Blue Vials
+  verb: Note on
+  itemDescription: "Medical Research Department\n\nBrief summary of:\n\nStandard
+    issue combatant Mental Balancer, A.K.A, \"MBs\".\n\nThe inital concoction developed
+    five years ago during the conception of the war still proves proficient at providing
+    mental relief and emotional stability. Recent iterations have only further optimized
+    its efficacy, but must be taken in the correct amount. \n\nProvided are the recommended
+    use cases for both variants.\n\n0 Variant - Only use for minor mental distress.\n1
+    Variant - Only use for mental breakdowns and symptoms of                  loss
+    of speech.  "
