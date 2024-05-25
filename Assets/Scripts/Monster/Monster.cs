@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +14,12 @@ public class Monster : MonoBehaviour
     private Animator spriteAnim;
     private AngleToPlayer atp;
     private bool waiting = false;
+
+    private AudioSource aS;
+    [SerializeField] private AudioClip calmAudio;
+    [SerializeField] private AudioClip huntAudio;
+    private bool huntSound = false;
+    private bool calmSound = false;
 
     private bool chasing = false;
     private bool attacking = false;
@@ -34,6 +39,7 @@ public class Monster : MonoBehaviour
 
     private void Start()
     {
+        aS = GetComponent<AudioSource>();
         fov = GetComponent<FieldOfView>();
         spriteAnim = GetComponentInChildren<Animator>();
         atp = GetComponent<AngleToPlayer>();
@@ -43,6 +49,21 @@ public class Monster : MonoBehaviour
 
     private void Update()
     {
+        if (!chasing && !calmSound)
+        { 
+            calmSound = true;
+            huntSound = false;
+            aS.clip = calmAudio;
+            aS.Play();
+        }
+        if (chasing && !huntSound)
+        {
+            calmSound = false;
+            huntSound = true;
+            aS.clip = huntAudio;
+            aS.Play();
+        }
+
         spriteAnim.SetFloat("spriteRot", atp.lastIndex);
 
         if (!seePlayer && chasing)
