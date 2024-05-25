@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6741d109139046e48a1154a02ced038f, type: 3}
   m_Name: SideObjKey_00
   m_EditorClassIdentifier: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: b4160cf2a5c14ae42a15dc1a7925b545, type: 3}
   itemName: Cassette Tape
   verb: Take
   itemDescription: This cassette tape is weirdly fully intact and looks to be in

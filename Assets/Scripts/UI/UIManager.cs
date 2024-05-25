@@ -57,14 +57,14 @@ public class UIManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                if (!paused) toggleMenu(paused,1);
+                if (!paused) toggleMenu(paused,0);
                 else toggleMenu(paused);
             }
 
             // 0 Diary
             if (Input.GetKeyDown(KeyCode.Z)) toggleMenu(paused, 0);
             // 1 Map
-            if (Input.GetKeyDown(KeyCode.M)) toggleMenu(paused, 1);
+            //if (Input.GetKeyDown(KeyCode.M)) toggleMenu(paused, 1);
             // 2 Notes
             if (Input.GetKeyDown(KeyCode.X)) toggleMenu(paused, 2);
             // 3 Spells

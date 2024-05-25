@@ -24,6 +24,8 @@ public class MovementControls : MonoBehaviour
     private Vector3 moveDirection;
     private Vector2 currentInput;
 
+    private AudioSource aS;
+
     private bool paused
     { get { return GameManager.Instance.paused; } }
 
@@ -50,6 +52,7 @@ public class MovementControls : MonoBehaviour
 
     private void Start()
     {
+        aS = GetComponent<AudioSource>();
         cam = GetComponentInChildren<Camera>();
         cc = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -62,11 +65,28 @@ public class MovementControls : MonoBehaviour
         {
             MoveInput();
             MouseInput();
-
+            StepSound();
             MovePlayer();
         }
     }
 
+    private bool isMoving
+    {
+        get { return Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0; } 
+    }
+    private void StepSound()
+    {
+        if (isMoving)
+        {
+            if (!aS.isPlaying)
+            {
+                if (aS.pitch > 0.5f) aS.pitch = 0.5f;
+                else aS.pitch = 0.6f;
+
+                aS.Play();
+            }
+        }
+    }
 
     private void MoveInput()
     {
