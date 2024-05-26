@@ -70,6 +70,8 @@ public class Interactable : MonoBehaviour
 
         if (patEllie)
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             SceneManager.LoadScene(3);
         }
 
