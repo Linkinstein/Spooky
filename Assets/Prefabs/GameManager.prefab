@@ -48,9 +48,13 @@ MonoBehaviour:
   cinematic: 0
   spellsUnlocked: 000001000000010101
   objectives:
-  - Test Objective 1
-  - Test Objective 2
-  - Test Objective 3
+  - Wake up
+  - Find a way to escape
+  - Find a way into the Armory
+  - Search for the Staff Access Key
+  - Use the Staff Access Key
+  - Access the Warden's Quarters
+  - Escape using the Lift Access Key
   objectivesIndex: 0
   keyItems: []
   consumables:

@@ -25,7 +25,6 @@ public class GenericButton : MonoBehaviour
         Application.Quit();
     }
 
-
     public void Play()
     {
         if (GameManager.Instance != null) GameManager.Instance.StartNew();

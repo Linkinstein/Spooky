@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public List<ItemData> consumables = new List<ItemData>();
     public List<ItemData> notes = new List<ItemData>();
 
+    [SerializeField] private ItemData amulet;
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        keyItems.Add(amulet);
     }
 
     public void StartNew()
@@ -41,6 +43,7 @@ public class GameManager : MonoBehaviour
         keyItems = new List<ItemData>();
         consumables = new List<ItemData>();
         notes = new List<ItemData>();
+        keyItems.Add(amulet);
         SceneManager.LoadScene(1);
     }
 }

@@ -941,6 +941,7 @@ Transform:
   - {fileID: 694040703}
   - {fileID: 817129970}
   - {fileID: 1500474124}
+  - {fileID: 1490851211}
   - {fileID: 287934822}
   - {fileID: 790023358}
   - {fileID: 661248877}
@@ -2457,6 +2458,10 @@ MonoBehaviour:
   door: 1
   consumable: 0
   note: 0
+  startEllie: 0
+  patEllie: 0
+  projector: 0
+  video: {fileID: 0}
 --- !u!65 &914865991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3571,6 +3576,74 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450505253}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1490851210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1490851211}
+  - component: {fileID: 1490851212}
+  m_Layer: 0
+  m_Name: PSC_DoorWall_04 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1490851211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490851210}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 29.79, y: 1.5, z: 6.540001}
+  m_LocalScale: {x: 3, y: 3, z: 0.10000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 497079914}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!328 &1490851212
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490851210}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 1
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 1
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: https://www.youtube.com/watch?v=2MiNjspIxJg
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &1500474123
 GameObject:
   m_ObjectHideFlags: 0
@@ -4094,6 +4167,10 @@ MonoBehaviour:
   door: 1
   consumable: 0
   note: 0
+  startEllie: 0
+  patEllie: 0
+  projector: 0
+  video: {fileID: 0}
 --- !u!1 &1595264083
 GameObject:
   m_ObjectHideFlags: 0
@@ -5241,6 +5318,10 @@ MonoBehaviour:
   door: 0
   consumable: 0
   note: 0
+  startEllie: 0
+  patEllie: 0
+  projector: 0
+  video: {fileID: 0}
 --- !u!65 &2087060689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6796,6 +6877,10 @@ MonoBehaviour:
   door: 0
   consumable: 0
   note: 0
+  startEllie: 0
+  patEllie: 0
+  projector: 0
+  video: {fileID: 0}
 --- !u!4 &7746009784175755120
 Transform:
   m_ObjectHideFlags: 0
@@ -6902,6 +6987,10 @@ MonoBehaviour:
   door: 0
   consumable: 0
   note: 1
+  startEllie: 0
+  patEllie: 0
+  projector: 0
+  video: {fileID: 0}
 --- !u!23 &8327561820892160026
 MeshRenderer:
   m_ObjectHideFlags: 0

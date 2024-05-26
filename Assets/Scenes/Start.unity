@@ -345,7 +345,8 @@ GameObject:
   - component: {fileID: 169236941}
   - component: {fileID: 169236940}
   - component: {fileID: 169236939}
-  m_Layer: 0
+  - component: {fileID: 169236942}
+  m_Layer: 8
   m_Name: Lift_Panel_ (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,6 +439,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169236937}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &169236942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169236937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d639361ec6b3176469696fe5ed3b146e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 61f3292ec18b22544b2d812a4671aad4, type: 2}
+  willProgress: 1
+  progressIndex: 1
+  keyItem: 0
+  door: 0
+  consumable: 0
+  note: 0
+  startEllie: 1
+  patEllie: 0
+  projector: 0
+  video: {fileID: 0}
 --- !u!1 &206606612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +1454,6 @@ GameObject:
   - component: {fileID: 362149502}
   - component: {fileID: 362149505}
   - component: {fileID: 362149504}
-  - component: {fileID: 362149503}
   m_Layer: 0
   m_Name: Lift_Panel_ (7)
   m_TagString: Untagged
@@ -1453,27 +1476,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1142936012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &362149503
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362149501}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &362149504
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1540,34 +1542,6 @@ PrefabInstance:
     - target: {fileID: 73273891863429540, guid: 4611a2ce2c6985849b89b4d22b86753c, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845315103763827577, guid: 4611a2ce2c6985849b89b4d22b86753c, type: 3}
-      propertyPath: objectives.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845315103763827577, guid: 4611a2ce2c6985849b89b4d22b86753c, type: 3}
-      propertyPath: objectives.Array.data[0]
-      value: Get out
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845315103763827577, guid: 4611a2ce2c6985849b89b4d22b86753c, type: 3}
-      propertyPath: objectives.Array.data[1]
-      value: Find a way into the Armory
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845315103763827577, guid: 4611a2ce2c6985849b89b4d22b86753c, type: 3}
-      propertyPath: objectives.Array.data[2]
-      value: Search for the Staff Access Key
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845315103763827577, guid: 4611a2ce2c6985849b89b4d22b86753c, type: 3}
-      propertyPath: objectives.Array.data[3]
-      value: Use the Staff Access Key
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845315103763827577, guid: 4611a2ce2c6985849b89b4d22b86753c, type: 3}
-      propertyPath: objectives.Array.data[4]
-      value: Access the Warden's Quarters
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845315103763827577, guid: 4611a2ce2c6985849b89b4d22b86753c, type: 3}
-      propertyPath: objectives.Array.data[5]
-      value: Escape using the Lift Access Key
       objectReference: {fileID: 0}
     - target: {fileID: 6247488549624322247, guid: 4611a2ce2c6985849b89b4d22b86753c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3270,6 +3244,10 @@ MonoBehaviour:
   door: 0
   consumable: 0
   note: 1
+  startEllie: 0
+  patEllie: 0
+  projector: 0
+  video: {fileID: 0}
 --- !u!65 &1021415650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4181,6 +4159,10 @@ MonoBehaviour:
   door: 0
   consumable: 0
   note: 1
+  startEllie: 0
+  patEllie: 0
+  projector: 0
+  video: {fileID: 0}
 --- !u!65 &1347500865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4456,7 +4438,6 @@ GameObject:
   - component: {fileID: 1388764316}
   - component: {fileID: 1388764319}
   - component: {fileID: 1388764318}
-  - component: {fileID: 1388764317}
   m_Layer: 0
   m_Name: Lift_Panel_ (3)
   m_TagString: Untagged
@@ -4479,29 +4460,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1142936012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &1388764317
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388764315}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1388764318
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4563,7 +4521,6 @@ GameObject:
   - component: {fileID: 1391590384}
   - component: {fileID: 1391590387}
   - component: {fileID: 1391590386}
-  - component: {fileID: 1391590385}
   m_Layer: 0
   m_Name: Lift_Panel_ (5)
   m_TagString: Untagged
@@ -4586,29 +4543,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1142936012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &1391590385
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391590383}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1391590386
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5018,7 +4952,6 @@ GameObject:
   - component: {fileID: 1601240862}
   - component: {fileID: 1601240865}
   - component: {fileID: 1601240864}
-  - component: {fileID: 1601240863}
   m_Layer: 0
   m_Name: Lift_Panel_ (6)
   m_TagString: Untagged
@@ -5041,29 +4974,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1142936012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &1601240863
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601240861}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1601240864
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5153,6 +5063,10 @@ MonoBehaviour:
   door: 1
   consumable: 0
   note: 0
+  startEllie: 0
+  patEllie: 0
+  projector: 0
+  video: {fileID: 0}
 --- !u!65 &1609069753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5566,7 +5480,6 @@ GameObject:
   - component: {fileID: 1750788596}
   - component: {fileID: 1750788599}
   - component: {fileID: 1750788598}
-  - component: {fileID: 1750788597}
   m_Layer: 0
   m_Name: Lift_Panel_ (4)
   m_TagString: Untagged
@@ -5589,29 +5502,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1142936012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &1750788597
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750788595}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1750788598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6168,13 +6058,13 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.37
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -6226,13 +6116,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906079633}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6830127, y: -0.18301266, z: -0.18301266, w: 0.6830127}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1357338071}
-  m_LocalEulerAnglesHint: {x: -90, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &1970542819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6807504153427829779, guid: 10edcdeba29ffb34e967a2e2290264f4, type: 3}

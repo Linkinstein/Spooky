@@ -8,6 +8,8 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
 
+    [SerializeField] private GameObject objUpdater;
+
     [SerializeField] private GameObject screenUI;
     [SerializeField] private GameObject pauseUI;
     [SerializeField] private GameObject deathUI;
@@ -175,5 +177,11 @@ public class UIManager : MonoBehaviour
         cinematic = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    public void updateObj()
+    {
+        objUpdater.SetActive(false);
+        objUpdater.SetActive(true);
     }
 }

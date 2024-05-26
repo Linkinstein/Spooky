@@ -15,4 +15,5 @@ MonoBehaviour:
   itemImage: {fileID: 21300000, guid: b4160cf2a5c14ae42a15dc1a7925b545, type: 3}
   itemName: Red Key
   verb: Take
-  itemDescription: A red key used to open the door out of the white room.
+  itemDescription: I do not remember where I got this key, nor do I know what it
+    opens.

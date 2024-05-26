@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
@@ -13,6 +14,13 @@ public class Interactable : MonoBehaviour
     [SerializeField] private bool door;
     [SerializeField] private bool consumable;
     [SerializeField] private bool note;
+    [SerializeField] private bool startEllie;
+    [SerializeField] private bool patEllie;
+    [SerializeField] private bool projector;
+    [SerializeField] private GameObject video;
+
+    private UIManager ui
+    { get { return UIManager.Instance; } }
 
     private GameManager gm
     { get { return GameManager.Instance; } }
@@ -24,7 +32,7 @@ public class Interactable : MonoBehaviour
     { 
         get 
         {
-            if (door) return "Requires";
+            if (door||projector) return "Requires";
             else return item.verb;
         } 
     }
@@ -55,6 +63,26 @@ public class Interactable : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (startEllie)
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        if (patEllie)
+        {
+            SceneManager.LoadScene(3);
+        }
+
+        if (projector)
+        {
+            foreach (ItemData id in gm.keyItems)
+            {
+                if (id.itemName.Equals(item.itemName))
+                {
+                    if (video != null) video.SetActive(true);
+                }
+            }
+        }
     }
 
     private void Progress()
@@ -62,7 +90,11 @@ public class Interactable : MonoBehaviour
         if (gm != null)
         {
             if (gm.objectivesIndex<progressIndex) gm.objectivesIndex = progressIndex;
-        } 
-        
+        }
+
+        if (ui != null)
+        {
+            ui.updateObj();
+        }
     }
 }
