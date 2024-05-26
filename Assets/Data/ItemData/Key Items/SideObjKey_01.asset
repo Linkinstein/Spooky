@@ -15,5 +15,5 @@ MonoBehaviour:
   itemImage: {fileID: 21300000, guid: b4160cf2a5c14ae42a15dc1a7925b545, type: 3}
   itemName: Cafeteria & Bedroom Key
   verb: Take
-  itemDescription: Key used to access the Prisoners Cafeteria. Looks pretty grimy
-    and sticky despite its vibrant orange color.
+  itemDescription: Key used to access the Prisoners Cafeteria and Staff Bedroom.
+    Looks pretty grimy and sticky despite its vibrant orange color.
