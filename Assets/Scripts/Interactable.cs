@@ -79,7 +79,11 @@ public class Interactable : MonoBehaviour
             {
                 if (id.itemName.Equals(item.itemName))
                 {
-                    if (video != null) video.SetActive(true);
+                    if (video != null) 
+                    { 
+                        video.SetActive(true); 
+                        this.gameObject.GetComponent<BoxCollider>().enabled = false;
+                    }
                 }
             }
         }
